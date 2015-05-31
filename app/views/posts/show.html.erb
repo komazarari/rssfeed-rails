@@ -1,4 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<h2><%= @post.title %></h2>
+
+<h3><%= @post.created_at.localtime %></h3>
+
+<p><%= @post.description %></p>
+<p><%= link_to 'media file', @post.medialink %></p>
+
+
+<!-- <%= link_to 'Edit', edit_post_path(@post) %> | -->
 <%= link_to 'Back', posts_path %>
