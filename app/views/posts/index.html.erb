@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
-
+<div><%= link_to 'RSS2.0', feed_posts_url %></div>
+<div><%= link_to 'feed', feed_posts_url.gsub(/^https?/,'feed') %></div>
+<hr>
     <% @posts.each do |post| %>
     <h3><%= link_to post.title, post_path(post) %></h3>
         <ul>

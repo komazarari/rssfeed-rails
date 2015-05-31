@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= auto_discovery_link_tag(:rss, feed_posts_url) %>
 <%= yield %>
 
 </body>

@@ -9,10 +9,10 @@ xml.rss version: '2.0' do
       xml.item do
         xml.title post.title
         xml.description post.description
-        xml.pubDate l(post.created_at)
+        xml.pubDate post.created_at.rfc2822
         xml.link post_url(post)
         xml.guid post_url(post)
-        xml.enclosure(url: post.medialink, type: 'audio/aac')
+        xml.enclosure(url: post.medialink, type: post.mimetype)
       end
     end
   end
