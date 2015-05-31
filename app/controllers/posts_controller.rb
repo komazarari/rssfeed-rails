@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def feed
-    @posts = Post.order(:created_at).limit(20)
+    @posts = Post.order(created_at: :desc).limit(20)
 
     respond_to do |format|
       format.html
